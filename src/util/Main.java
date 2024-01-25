@@ -1,12 +1,17 @@
 public class Main {
-    public static void main(String[] args) throws IllegalAccessException {
-        Complex a = new Complex(1, 2);
-        Complex b = new Complex(3, 4);
+    public static void main(String[] args)  {
+        Complex a = new Complex(2, 4);
+        Complex b = new Complex(5, 6);
 
         Calculator.add(a, b);
         Calculator.multiply(a, b);
-        Calculator.divide(a, b);
-       
+        try {
+            Calculator.divide(a, b);
+        } catch (IllegalAccessException e) {
+            
+            e.printStackTrace();
+        }
+        // Start.run();
     }
 
 }
