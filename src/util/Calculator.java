@@ -7,7 +7,7 @@ public class Calculator {
 private static final Logger logger = Logger.getLogger(Calculator.class.getName());
     
 public static Complex add(Complex a, Complex b){
-    logger.info("Adding complex numbers {} and {}");
+    logger.info("Adding complex numbers a and b");
     Complex sum = a.add(b);
     logger.info("Result:" + sum);
     return sum;
@@ -24,9 +24,9 @@ public static Complex add(Complex a, Complex b){
         if (b.getReal() == 0 && b.geImaginary() == 0 ){
             throw new IllegalAccessException("Cannot divide by zero");
         }
-    logger.info("Dividing complex numbers {} and {}");
+    logger.info("Dividing complex numbers a and b");
     Complex quotient = a.divide(b);
-    logger.info("Result: {}" + quotient);
+    logger.info("Result: " + quotient);
     return quotient;
     }
     
